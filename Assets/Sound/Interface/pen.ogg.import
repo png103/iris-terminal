@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/pen.ogg-b74965f1f54d83058c654cb2543ceb72.oggstr"
+
+[deps]
+
+source_file="res://Assets/Sound/Interface/pen.ogg"
+dest_files=[ "res://.import/pen.ogg-b74965f1f54d83058c654cb2543ceb72.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

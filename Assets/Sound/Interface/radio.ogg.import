@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/radio.ogg-192c4649009474ccc9b972d42c8c2cea.oggstr"
+
+[deps]
+
+source_file="res://Assets/Sound/Interface/radio.ogg"
+dest_files=[ "res://.import/radio.ogg-192c4649009474ccc9b972d42c8c2cea.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0
