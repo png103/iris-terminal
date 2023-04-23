@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/handgun_reload.ogg-f3ec717a956b103b4076be0ace6b3462.oggstr"
+
+[deps]
+
+source_file="res://Assets/Sound/Items/handgun_reload.ogg"
+dest_files=[ "res://.import/handgun_reload.ogg-f3ec717a956b103b4076be0ace6b3462.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

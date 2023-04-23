@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/nighthunter.ogg-c0190115012f36514836e3225bd53987.oggstr"
+
+[deps]
+
+source_file="res://Assets/Sound/Music/nighthunter.ogg"
+dest_files=[ "res://.import/nighthunter.ogg-c0190115012f36514836e3225bd53987.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

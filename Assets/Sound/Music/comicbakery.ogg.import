@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/comicbakery.ogg-12d77a6ed623ddc00db64a5b0ede8137.oggstr"
+
+[deps]
+
+source_file="res://Assets/Sound/Music/comicbakery.ogg"
+dest_files=[ "res://.import/comicbakery.ogg-12d77a6ed623ddc00db64a5b0ede8137.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

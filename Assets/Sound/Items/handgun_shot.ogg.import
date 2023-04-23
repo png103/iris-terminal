@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/handgun_shot.ogg-dada062152e8046787f36637b9b7cdba.oggstr"
+
+[deps]
+
+source_file="res://Assets/Sound/Items/handgun_shot.ogg"
+dest_files=[ "res://.import/handgun_shot.ogg-dada062152e8046787f36637b9b7cdba.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

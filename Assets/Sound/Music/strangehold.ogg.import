@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/strangehold.ogg-c10884af9a5a3d4a5dad56fc19f4dade.oggstr"
+
+[deps]
+
+source_file="res://Assets/Sound/Music/strangehold.ogg"
+dest_files=[ "res://.import/strangehold.ogg-c10884af9a5a3d4a5dad56fc19f4dade.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

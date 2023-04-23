@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/tintinonthemoon.ogg-0b4be0a7870607446e0f18a533963563.oggstr"
+
+[deps]
+
+source_file="res://Assets/Sound/Music/tintinonthemoon.ogg"
+dest_files=[ "res://.import/tintinonthemoon.ogg-0b4be0a7870607446e0f18a533963563.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/pickaxe.ogg-8684eba8870f0a59cba0b52de71ae4d1.oggstr"
+
+[deps]
+
+source_file="res://Assets/Sound/Items/pickaxe.ogg"
+dest_files=[ "res://.import/pickaxe.ogg-8684eba8870f0a59cba0b52de71ae4d1.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0
