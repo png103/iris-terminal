@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/chew.ogg-ae27f96039d45eeef491ddd9c03268f9.oggstr"
+
+[deps]
+
+source_file="res://Assets/Sound/Player/chew.ogg"
+dest_files=[ "res://.import/chew.ogg-ae27f96039d45eeef491ddd9c03268f9.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

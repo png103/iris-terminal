@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/hitheadonceiling.ogg-e2f355d66784efbc8d363428119ab704.oggstr"
+
+[deps]
+
+source_file="res://Assets/Sound/Player/hitheadonceiling.ogg"
+dest_files=[ "res://.import/hitheadonceiling.ogg-e2f355d66784efbc8d363428119ab704.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

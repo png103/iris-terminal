@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/stash3.ogg-89e329e100c9b95ce2d2461171c56827.oggstr"
+
+[deps]
+
+source_file="res://Assets/Sound/Player/stash3.ogg"
+dest_files=[ "res://.import/stash3.ogg-89e329e100c9b95ce2d2461171c56827.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0
