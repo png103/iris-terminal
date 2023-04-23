@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=2]
+
+[sub_resource type="PhysicsMaterial" id=5]
+bounce = 0.2
+
+[sub_resource type="BoxShape" id=2]
+
+[sub_resource type="CubeMesh" id=3]
+size = Vector3( 0.4, 0.4, 0.4 )
+
+[sub_resource type="SpatialMaterial" id=4]
+albedo_color = Color( 1, 0, 0.827451, 1 )
+
+[node name="PlumpHelmet_Dropped" type="RigidBody" groups=["pickable"]]
+collision_layer = 2
+collision_mask = 3
+physics_material_override = SubResource( 5 )
+gravity_scale = 2.0
+linear_damp = 1.0
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0 )
+shape = SubResource( 2 )
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )

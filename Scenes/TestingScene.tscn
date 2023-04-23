@@ -1,0 +1,117 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://Scenes/Living/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://default_env.tres" type="Environment" id=2]
+[ext_resource path="res://Assets/Textures/cable ties.png" type="Texture" id=7]
+[ext_resource path="res://Scenes/Objects/Sign.gd" type="Script" id=8]
+
+[sub_resource type="BoxShape" id=2]
+
+[sub_resource type="CubeMesh" id=1]
+
+[sub_resource type="CubeMesh" id=3]
+
+[sub_resource type="BoxShape" id=4]
+
+[sub_resource type="Animation" id=8]
+resource_name = "Intro"
+
+[sub_resource type="CubeMesh" id=10]
+
+[sub_resource type="SpatialMaterial" id=11]
+albedo_texture = ExtResource( 7 )
+
+[sub_resource type="BoxShape" id=12]
+
+[node name="TestingScene" type="Spatial"]
+
+[node name="StaticBody" type="StaticBody" parent="."]
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
+transform = Transform( 20.3, 0, 0, 0, 1, 0, 0, 0, 17.8, -23, 0, 0 )
+shape = SubResource( 2 )
+
+[node name="MeshInstance" type="MeshInstance" parent="StaticBody"]
+transform = Transform( 20.3, 0, 0, 0, 1, 0, 0, 0, 17.8, -23, 0, 0 )
+mesh = SubResource( 1 )
+skeleton = NodePath("../..")
+
+[node name="StaticBody4" type="StaticBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1.2, 0, 0, 0, 0.13, 0, 2, 16 )
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody4"]
+transform = Transform( 20.3, 0, 0, 0, 1, 0, 0, 0, 17.8, -23, 0, 0 )
+shape = SubResource( 2 )
+
+[node name="MeshInstance" type="MeshInstance" parent="StaticBody4"]
+transform = Transform( 20.3, 0, 0, 0, 1, 0, 0, 0, 17.8, -23, 0, 0 )
+mesh = SubResource( 1 )
+skeleton = NodePath("../..")
+
+[node name="StaticBody5" type="StaticBody" parent="."]
+transform = Transform( 0.2, 0, 0, 0, 2.592, 0, 0, 0, 0.13, -9, 4, -7 )
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody5"]
+transform = Transform( 20.3, 0, 0, 0, 1, 0, 0, 0, 17.8, -23, 0, 0 )
+shape = SubResource( 2 )
+
+[node name="MeshInstance" type="MeshInstance" parent="StaticBody5"]
+transform = Transform( 20.3, 0, 0, 0, 1, 0, 0, 0, 17.8, -23, 0, 0 )
+mesh = SubResource( 1 )
+skeleton = NodePath("../..")
+
+[node name="StaticBody7" type="StaticBody" parent="."]
+transform = Transform( 0.2, 0, 0, 0, 3.24, 0, 0, 0, 0.13, -29, 11, -15 )
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody7"]
+transform = Transform( 20.3, 0, 0, 0, 1, 0, 0, 0, 17.8, -23, 0, 0 )
+shape = SubResource( 2 )
+
+[node name="MeshInstance" type="MeshInstance" parent="StaticBody7"]
+transform = Transform( 20.3, 0, 0, 0, 1, 0, 0, 0, 17.8, -23, 0, 0 )
+mesh = SubResource( 1 )
+skeleton = NodePath("../..")
+
+[node name="StaticBody2" type="StaticBody" parent="."]
+transform = Transform( 18.6732, 0, 0, 0, 11.115, 0, 0, 0, 1, -24, 12, -18 )
+
+[node name="MeshInstance" type="MeshInstance" parent="StaticBody2"]
+mesh = SubResource( 3 )
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody2"]
+shape = SubResource( 4 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/Intro = SubResource( 8 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -27, 7, 0 )
+
+[node name="Gay cableties" type="RigidBody" parent="." groups=["readable"]]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15.1769, 3.66041, 0 )
+gravity_scale = 2.0
+script = ExtResource( 8 )
+text = "Hey what's up ummmmmmmmmm urmm hi"
+
+[node name="MeshInstance" type="MeshInstance" parent="Gay cableties"]
+mesh = SubResource( 10 )
+material/0 = SubResource( 11 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Gay cableties"]
+shape = SubResource( 12 )
+
+[node name="Straight cableties" type="RigidBody" parent="." groups=["readable"]]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -35.181, 3.66041, -3.93069 )
+gravity_scale = 2.0
+script = ExtResource( 8 )
+text = "personally i like big boobs"
+
+[node name="MeshInstance" type="MeshInstance" parent="Straight cableties"]
+mesh = SubResource( 10 )
+material/0 = SubResource( 11 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Straight cableties"]
+shape = SubResource( 12 )
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource( 2 )

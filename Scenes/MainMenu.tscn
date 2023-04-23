@@ -1,0 +1,680 @@
+[gd_scene load_steps=49 format=2]
+
+[ext_resource path="res://Assets/Misc/calibri.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Assets/Misc/AldotheApache.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Assets/Textures/space.png" type="Texture" id=3]
+[ext_resource path="res://Scenes/MainMenu.gd" type="Script" id=4]
+[ext_resource path="res://Assets/Textures/cable ties.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Sound/Interface/click.ogg" type="AudioStream" id=6]
+[ext_resource path="res://Assets/Sound/Interface/scroll.ogg" type="AudioStream" id=7]
+[ext_resource path="res://Assets/Textures/Interface/checkbox_on.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Textures/Interface/checkbox_off.png" type="Texture" id=9]
+[ext_resource path="res://Assets/Sound/Interface/pause.ogg" type="AudioStream" id=10]
+[ext_resource path="res://Assets/Sound/Player/switch.ogg" type="AudioStream" id=11]
+[ext_resource path="res://Assets/Sound/Player/drop.ogg" type="AudioStream" id=12]
+[ext_resource path="res://Assets/Misc/calibrib.ttf" type="DynamicFontData" id=13]
+[ext_resource path="res://Assets/Sound/Interface/pen.ogg" type="AudioStream" id=14]
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxEmpty" id=3]
+
+[sub_resource type="StyleBoxEmpty" id=4]
+
+[sub_resource type="StyleBoxEmpty" id=5]
+
+[sub_resource type="StyleBoxEmpty" id=6]
+
+[sub_resource type="StyleBoxEmpty" id=7]
+
+[sub_resource type="Theme" id=8]
+default_font = SubResource( 2 )
+Button/colors/font_color = Color( 0.592157, 0.592157, 0.592157, 1 )
+Button/colors/font_color_focus = Color( 0.592157, 0.592157, 0.592157, 1 )
+Button/colors/font_color_pressed = Color( 0.592157, 0.592157, 0.592157, 1 )
+Button/fonts/font = SubResource( 2 )
+Button/styles/disabled = SubResource( 3 )
+Button/styles/focus = SubResource( 4 )
+Button/styles/hover = SubResource( 5 )
+Button/styles/normal = SubResource( 6 )
+Button/styles/pressed = SubResource( 7 )
+
+[sub_resource type="DynamicFont" id=10]
+size = 128
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=22]
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxEmpty" id=23]
+
+[sub_resource type="StyleBoxEmpty" id=24]
+
+[sub_resource type="StyleBoxEmpty" id=25]
+
+[sub_resource type="StyleBoxEmpty" id=26]
+
+[sub_resource type="StyleBoxEmpty" id=27]
+
+[sub_resource type="StyleBoxFlat" id=29]
+bg_color = Color( 0.831373, 0.827451, 0.521569, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+expand_margin_left = 5.0
+expand_margin_right = 5.0
+expand_margin_top = 5.0
+expand_margin_bottom = 5.0
+shadow_offset = Vector2( 1, 0 )
+
+[sub_resource type="Theme" id=28]
+default_font = SubResource( 22 )
+Button/colors/font_color = Color( 0.592157, 0.592157, 0.592157, 1 )
+Button/colors/font_color_focus = Color( 0.592157, 0.592157, 0.592157, 1 )
+Button/colors/font_color_pressed = Color( 0.592157, 0.592157, 0.592157, 1 )
+Button/fonts/font = SubResource( 22 )
+Button/styles/disabled = SubResource( 23 )
+Button/styles/focus = SubResource( 24 )
+Button/styles/hover = SubResource( 25 )
+Button/styles/normal = SubResource( 26 )
+Button/styles/pressed = SubResource( 27 )
+CheckBox/icons/checked = ExtResource( 8 )
+CheckBox/icons/unchecked = ExtResource( 9 )
+TooltipLabel/colors/font_color_shadow = Color( 1, 1, 1, 0 )
+TooltipPanel/styles/panel = SubResource( 29 )
+
+[sub_resource type="DynamicFont" id=21]
+size = 13
+font_data = ExtResource( 13 )
+
+[sub_resource type="DynamicFont" id=30]
+size = 15
+font_data = ExtResource( 13 )
+
+[sub_resource type="DynamicFont" id=14]
+size = 15
+extra_spacing_top = 1
+extra_spacing_bottom = 1
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=15]
+bg_color = Color( 0.392157, 0.392157, 0.392157, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0, 1, 0.0784314, 1 )
+
+[sub_resource type="StyleBoxFlat" id=16]
+content_margin_left = 1.0
+content_margin_right = 1.0
+bg_color = Color( 0.227451, 0.227451, 0.227451, 1 )
+corner_detail = 1
+anti_aliasing = false
+
+[sub_resource type="StyleBoxEmpty" id=17]
+
+[sub_resource type="Theme" id=31]
+LineEdit/fonts/font = SubResource( 14 )
+LineEdit/styles/focus = SubResource( 15 )
+LineEdit/styles/normal = SubResource( 16 )
+LineEdit/styles/read_only = SubResource( 17 )
+
+[sub_resource type="DynamicFont" id=32]
+size = 15
+font_data = ExtResource( 13 )
+
+[sub_resource type="DynamicFont" id=38]
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=37]
+size = 15
+font_data = ExtResource( 13 )
+
+[sub_resource type="DynamicFont" id=12]
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=11]
+font_data = ExtResource( 1 )
+
+[sub_resource type="PanoramaSky" id=13]
+panorama = ExtResource( 3 )
+
+[sub_resource type="Environment" id=33]
+background_mode = 2
+background_sky = SubResource( 13 )
+ambient_light_energy = 16.0
+
+[sub_resource type="SpatialMaterial" id=39]
+albedo_texture = ExtResource( 5 )
+
+[sub_resource type="CubeMesh" id=34]
+material = SubResource( 39 )
+
+[sub_resource type="Animation" id=35]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Camera:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=36]
+length = 120.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Camera:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 120 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ), Vector3( 360, 360, 0 ) ]
+}
+
+[node name="Space" type="Spatial"]
+script = ExtResource( 4 )
+
+[node name="MainMenu" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 640, 64 )
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="MainMenu"]
+volume_db = -7.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainMenu"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 64.0
+margin_top = -22.0
+margin_right = 164.0
+margin_bottom = 102.0
+theme = SubResource( 8 )
+custom_constants/separation = 20
+
+[node name="Play" type="Button" parent="MainMenu/VBoxContainer"]
+margin_right = 100.0
+margin_bottom = 16.0
+button_mask = 3
+text = "Join game"
+align = 0
+
+[node name="Settings" type="Button" parent="MainMenu/VBoxContainer"]
+margin_top = 36.0
+margin_right = 100.0
+margin_bottom = 52.0
+button_mask = 3
+text = "Game settings"
+align = 0
+
+[node name="Credits" type="Button" parent="MainMenu/VBoxContainer"]
+margin_top = 72.0
+margin_right = 100.0
+margin_bottom = 88.0
+button_mask = 3
+text = "Credits"
+align = 0
+
+[node name="Quit" type="Button" parent="MainMenu/VBoxContainer"]
+margin_top = 108.0
+margin_right = 100.0
+margin_bottom = 124.0
+button_mask = 3
+text = "Quit to desktop"
+align = 0
+
+[node name="Click" type="AudioStreamPlayer" parent="MainMenu"]
+stream = ExtResource( 6 )
+volume_db = 5.0
+
+[node name="Scroll" type="AudioStreamPlayer" parent="MainMenu"]
+stream = ExtResource( 7 )
+volume_db = 13.0
+
+[node name="Back" type="AudioStreamPlayer" parent="MainMenu"]
+stream = ExtResource( 10 )
+volume_db = 10.0
+
+[node name="Tick" type="AudioStreamPlayer" parent="MainMenu"]
+stream = ExtResource( 11 )
+
+[node name="Untick" type="AudioStreamPlayer" parent="MainMenu"]
+stream = ExtResource( 12 )
+
+[node name="Logo" type="Label" parent="MainMenu"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -335.5
+margin_top = 64.0
+margin_right = 335.5
+margin_bottom = 171.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 10 )
+text = "Iris Terminal"
+
+[node name="Timer" type="Timer" parent="MainMenu"]
+wait_time = 2.0
+one_shot = true
+
+[node name="Settings" type="Control" parent="MainMenu"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = SubResource( 28 )
+
+[node name="ColorRect" type="ColorRect" parent="MainMenu/Settings"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -136.0
+margin_top = -132.0
+margin_right = 136.0
+margin_bottom = 132.0
+color = Color( 0, 0.0823529, 0.168627, 0.698039 )
+
+[node name="Line2D" type="Line2D" parent="MainMenu/Settings/ColorRect"]
+position = Vector2( -264, -168 )
+points = PoolVector2Array( 264, 168, 264, 432, 536, 432, 536, 168, 264, 168 )
+width = 1.0
+default_color = Color( 0.133333, 0.333333, 0.533333, 1 )
+
+[node name="Back" type="Button" parent="MainMenu/Settings"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 56.0
+margin_top = -32.0
+margin_right = 328.0
+margin_bottom = -16.0
+button_mask = 3
+text = "<< Back"
+align = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainMenu/Settings"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -136.0
+margin_top = -132.0
+margin_right = 136.0
+margin_bottom = 132.0
+custom_constants/separation = 16
+alignment = 1
+
+[node name="Player" type="Button" parent="MainMenu/Settings/VBoxContainer"]
+margin_top = 92.0
+margin_right = 272.0
+margin_bottom = 108.0
+button_mask = 3
+text = "Player Setup"
+
+[node name="Binds" type="Button" parent="MainMenu/Settings/VBoxContainer"]
+margin_top = 124.0
+margin_right = 272.0
+margin_bottom = 140.0
+button_mask = 3
+text = "Keybinds"
+
+[node name="Interface" type="Button" parent="MainMenu/Settings/VBoxContainer"]
+margin_top = 156.0
+margin_right = 272.0
+margin_bottom = 172.0
+button_mask = 3
+text = "Visual"
+
+[node name="Player" type="Control" parent="MainMenu/Settings"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -20.0
+margin_top = -20.0
+margin_right = 20.0
+margin_bottom = 20.0
+
+[node name="Interface" type="ScrollContainer" parent="MainMenu/Settings/Player"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -128.0
+margin_top = -124.0
+margin_right = 128.0
+margin_bottom = 124.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainMenu/Settings/Player/Interface"]
+margin_right = 256.0
+margin_bottom = 48.0
+size_flags_horizontal = 3
+size_flags_vertical = 0
+custom_constants/separation = 16
+alignment = 1
+
+[node name="Title" type="Label" parent="MainMenu/Settings/Player/Interface/VBoxContainer"]
+margin_right = 256.0
+margin_bottom = 14.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 21 )
+text = "Player Setup"
+align = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MainMenu/Settings/Player/Interface/VBoxContainer"]
+margin_top = 30.0
+margin_right = 256.0
+margin_bottom = 48.0
+
+[node name="Label" type="Label" parent="MainMenu/Settings/Player/Interface/VBoxContainer/HBoxContainer"]
+margin_top = 1.0
+margin_right = 68.0
+margin_bottom = 17.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 30 )
+text = "Username:"
+
+[node name="LineEdit" type="LineEdit" parent="MainMenu/Settings/Player/Interface/VBoxContainer/HBoxContainer"]
+margin_left = 72.0
+margin_right = 256.0
+margin_bottom = 18.0
+size_flags_horizontal = 3
+theme = SubResource( 31 )
+max_length = 18
+context_menu_enabled = false
+clear_button_enabled = true
+placeholder_text = "Click here!"
+placeholder_alpha = 0.3
+caret_blink = true
+caret_blink_speed = 0.5
+
+[node name="Pen" type="AudioStreamPlayer" parent="MainMenu/Settings/Player/Interface/VBoxContainer/HBoxContainer"]
+stream = ExtResource( 14 )
+volume_db = 5.0
+
+[node name="Binds" type="Control" parent="MainMenu/Settings"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -20.0
+margin_top = -20.0
+margin_right = 20.0
+margin_bottom = 20.0
+
+[node name="Binds" type="ScrollContainer" parent="MainMenu/Settings/Binds"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -128.0
+margin_top = -124.0
+margin_right = 128.0
+margin_bottom = 124.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainMenu/Settings/Binds/Binds"]
+margin_right = 256.0
+margin_bottom = 14.0
+size_flags_horizontal = 3
+size_flags_vertical = 0
+custom_constants/separation = 16
+alignment = 1
+
+[node name="Title" type="Label" parent="MainMenu/Settings/Binds/Binds/VBoxContainer"]
+margin_right = 256.0
+margin_bottom = 14.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 21 )
+text = "Keybinds"
+align = 1
+
+[node name="Interface" type="Control" parent="MainMenu/Settings"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -20.0
+margin_top = -20.0
+margin_right = 20.0
+margin_bottom = 20.0
+
+[node name="Interface" type="ScrollContainer" parent="MainMenu/Settings/Interface"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -128.0
+margin_top = -124.0
+margin_right = 128.0
+margin_bottom = 124.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainMenu/Settings/Interface/Interface"]
+margin_right = 256.0
+margin_bottom = 46.0
+size_flags_horizontal = 3
+size_flags_vertical = 0
+custom_constants/separation = 16
+alignment = 1
+
+[node name="Title" type="Label" parent="MainMenu/Settings/Interface/Interface/VBoxContainer"]
+margin_right = 256.0
+margin_bottom = 14.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 21 )
+text = "Visual"
+align = 1
+
+[node name="OptionButton" type="OptionButton" parent="MainMenu/Settings/Interface/Interface/VBoxContainer"]
+margin_top = 30.0
+margin_right = 256.0
+margin_bottom = 46.0
+custom_fonts/font = SubResource( 32 )
+text = "Resolution"
+
+[node name="Credits" type="Control" parent="MainMenu/Settings"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -144.0
+margin_top = -128.0
+margin_right = 144.0
+margin_bottom = 128.0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MainMenu/Settings/Credits"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -120.0
+margin_top = -112.0
+margin_right = 120.0
+margin_bottom = 112.0
+scroll_horizontal_enabled = false
+
+[node name="Label" type="Label" parent="MainMenu/Settings/Credits/ScrollContainer"]
+margin_right = 240.0
+margin_bottom = 225.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 38 )
+text = "Code:
+PNG103
+
+Art:
+Sothopery
+
+Music:
+Botanik - ipidev
+Comic Bakery - Martin Galway
+Night Hunter, Tintin on the moon, Stranglehold 1 and 2 - Jeroen Tel
+Stormlord - Johannes Bjerregaard"
+align = 1
+autowrap = true
+
+[node name="QuitPopup" type="Control" parent="MainMenu"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = SubResource( 28 )
+
+[node name="ColorRect2" type="ColorRect" parent="MainMenu/QuitPopup"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.501961 )
+
+[node name="ColorRect" type="ColorRect" parent="MainMenu/QuitPopup"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -136.0
+margin_top = -50.0
+margin_right = 136.0
+margin_bottom = 50.0
+color = Color( 0, 0.0823529, 0.168627, 0.698039 )
+
+[node name="Line2D" type="Line2D" parent="MainMenu/QuitPopup/ColorRect"]
+points = PoolVector2Array( 0, 0, 0, 100, 272, 100, 272, 0, 23, 0, 0, 0 )
+width = 1.0
+default_color = Color( 0.133333, 0.333333, 0.533333, 1 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainMenu/QuitPopup/ColorRect"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -128.0
+margin_top = -44.0
+margin_right = 128.0
+margin_bottom = 44.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MainMenu/QuitPopup/ColorRect/VBoxContainer"]
+margin_right = 256.0
+margin_bottom = 68.0
+custom_fonts/bold_font = SubResource( 37 )
+bbcode_enabled = true
+bbcode_text = "[b]Please confirm.[/b]
+Are you sure you want to exit to the desktop?
+"
+text = "Please confirm.
+Are you sure you want to exit to the desktop?
+"
+fit_content_height = true
+scroll_active = false
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MainMenu/QuitPopup/ColorRect/VBoxContainer"]
+margin_top = 72.0
+margin_right = 256.0
+margin_bottom = 88.0
+alignment = 1
+
+[node name="Exit" type="Button" parent="MainMenu/QuitPopup/ColorRect/VBoxContainer/HBoxContainer"]
+margin_left = 72.0
+margin_right = 96.0
+margin_bottom = 16.0
+button_mask = 3
+text = "Exit"
+align = 0
+
+[node name="Label" type="Label" parent="MainMenu/QuitPopup/ColorRect/VBoxContainer/HBoxContainer"]
+margin_left = 100.0
+margin_right = 136.0
+margin_bottom = 16.0
+custom_colors/font_color = Color( 0, 0, 0, 0 )
+text = "AAAA"
+
+[node name="Cancel" type="Button" parent="MainMenu/QuitPopup/ColorRect/VBoxContainer/HBoxContainer"]
+margin_left = 140.0
+margin_right = 184.0
+margin_bottom = 16.0
+button_mask = 3
+text = "Cancel"
+align = 2
+
+[node name="Version" type="Label" parent="."]
+margin_left = 2.0
+margin_right = 154.0
+margin_bottom = 16.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 12 )
+text = "Iris Terminal Indev"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -319.0
+margin_top = -34.0
+margin_right = -1.0
+margin_bottom = 1.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 11 )
+bbcode_enabled = true
+bbcode_text = "
+Created by [wave]PNG103[/wave] - This project is open source!"
+text = "
+Created by PNG103 - This project is open source!"
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 33 )
+
+[node name="Camera" type="Camera" parent="."]
+current = true
+fov = 90.0
+
+[node name="Spin" type="Spatial" parent="Camera"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, -2, -5 )
+
+[node name="Cableties" type="MeshInstance" parent="Camera/Spin"]
+transform = Transform( 0.5, 0, -0.866025, 0, 1, 0, 0.866025, 0, 0.5, 0, 0, 0 )
+generate_lightmap = false
+mesh = SubResource( 34 )
+skeleton = NodePath("../../..")
+
+[node name="CameraRotator" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 35 )
+anims/Rotate = SubResource( 36 )
+
+[connection signal="mouse_entered" from="MainMenu/VBoxContainer/Play" to="." method="_on_Play_mouse_entered"]
+[connection signal="pressed" from="MainMenu/VBoxContainer/Play" to="." method="_on_Play_pressed"]
+[connection signal="mouse_entered" from="MainMenu/VBoxContainer/Settings" to="." method="_on_Settings_mouse_entered"]
+[connection signal="pressed" from="MainMenu/VBoxContainer/Settings" to="." method="_on_Settings_pressed"]
+[connection signal="mouse_entered" from="MainMenu/VBoxContainer/Credits" to="." method="_on_Button_mouse_entered"]
+[connection signal="pressed" from="MainMenu/VBoxContainer/Credits" to="." method="_on_Button_pressed"]
+[connection signal="mouse_entered" from="MainMenu/VBoxContainer/Quit" to="." method="_on_Quit_mouse_entered"]
+[connection signal="pressed" from="MainMenu/VBoxContainer/Quit" to="." method="_on_Quit_pressed"]
+[connection signal="mouse_entered" from="MainMenu/Settings/Back" to="." method="_on_Back_mouse_entered"]
+[connection signal="pressed" from="MainMenu/Settings/Back" to="." method="_on_Back_pressed"]
+[connection signal="mouse_entered" from="MainMenu/Settings/VBoxContainer/Player" to="." method="_on_Interface_mouse_entered"]
+[connection signal="pressed" from="MainMenu/Settings/VBoxContainer/Player" to="." method="_on_Player_pressed"]
+[connection signal="mouse_entered" from="MainMenu/Settings/VBoxContainer/Binds" to="." method="_on_Interface_mouse_entered"]
+[connection signal="pressed" from="MainMenu/Settings/VBoxContainer/Binds" to="." method="_on_Binds_pressed"]
+[connection signal="mouse_entered" from="MainMenu/Settings/VBoxContainer/Interface" to="." method="_on_Interface_mouse_entered"]
+[connection signal="pressed" from="MainMenu/Settings/VBoxContainer/Interface" to="." method="_on_Interface_pressed"]
+[connection signal="focus_exited" from="MainMenu/Settings/Player/Interface/VBoxContainer/HBoxContainer/LineEdit" to="." method="_on_LineEdit_focus_exited"]
+[connection signal="text_entered" from="MainMenu/Settings/Player/Interface/VBoxContainer/HBoxContainer/LineEdit" to="." method="_on_LineEdit_text_entered"]
+[connection signal="mouse_entered" from="MainMenu/QuitPopup/ColorRect/VBoxContainer/HBoxContainer/Exit" to="." method="_on_Exit_mouse_entered"]
+[connection signal="pressed" from="MainMenu/QuitPopup/ColorRect/VBoxContainer/HBoxContainer/Exit" to="." method="_on_Exit_pressed"]
+[connection signal="mouse_entered" from="MainMenu/QuitPopup/ColorRect/VBoxContainer/HBoxContainer/Cancel" to="." method="_on_Cancel_mouse_entered"]
+[connection signal="pressed" from="MainMenu/QuitPopup/ColorRect/VBoxContainer/HBoxContainer/Cancel" to="." method="_on_Cancel_pressed"]
