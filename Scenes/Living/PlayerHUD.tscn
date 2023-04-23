@@ -1,4 +1,4 @@
-[gd_scene load_steps=60 format=2]
+[gd_scene load_steps=57 format=2]
 
 [ext_resource path="res://Assets/Sound/Interface/scroll.ogg" type="AudioStream" id=1]
 [ext_resource path="res://Assets/Textures/Interface/crosshair1.png" type="Texture" id=2]
@@ -11,7 +11,6 @@
 [ext_resource path="res://Assets/Textures/Interface/oxygen.png" type="Texture" id=9]
 [ext_resource path="res://Assets/Textures/Interface/border.png" type="Texture" id=10]
 [ext_resource path="res://Assets/Sound/Atmos/loop.ogg" type="AudioStream" id=13]
-[ext_resource path="res://Assets/Textures/Interface/mana.png" type="Texture" id=16]
 [ext_resource path="res://Assets/Textures/Interface/cooldown background.png" type="Texture" id=17]
 [ext_resource path="res://Assets/Textures/Interface/cooldown bar.png" type="Texture" id=18]
 [ext_resource path="res://Assets/Sound/Player/drop.ogg" type="AudioStream" id=19]
@@ -187,61 +186,6 @@ tracks/1/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ Color( 0, 0.0823529, 0.168627, 0.698039 ) ]
-}
-
-[sub_resource type="Animation" id=47]
-resource_name = "ManaFade"
-length = 4.8
-tracks/0/type = "value"
-tracks/0/path = NodePath("ManaIcon:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 4, 4.8 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ Color( 0.231373, 0.0313726, 0.305882, 0.698039 ), Color( 0.231373, 0.0313726, 0.305882, 0.698039 ), Color( 0.231373, 0.0313726, 0.305882, 0 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Mana:custom_colors/font_color")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 4, 4.8 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ Color( 0.231373, 0.0313726, 0.305882, 0.698039 ), Color( 0.231373, 0.0313726, 0.305882, 0.698039 ), Color( 0.231373, 0.0313726, 0.305882, 0 ) ]
-}
-
-[sub_resource type="Animation" id=48]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/path = NodePath("ManaIcon:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Color( 0.231373, 0.0313726, 0.305882, 0 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Mana:custom_colors/font_color")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Color( 0.231373, 0.0313726, 0.305882, 0 ) ]
 }
 
 [sub_resource type="DynamicFont" id=12]
@@ -477,7 +421,6 @@ __meta__ = {
 }
 
 [node name="HUD" type="Control" parent="."]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 
@@ -526,15 +469,6 @@ custom_colors/font_color = Color( 0, 0.0823529, 0.168627, 0.698039 )
 custom_fonts/font = SubResource( 2 )
 text = "O2"
 
-[node name="Mana" type="Label" parent="HUD"]
-margin_left = 176.0
-margin_top = 72.0
-margin_right = 240.0
-margin_bottom = 114.0
-custom_colors/font_color = Color( 0.231373, 0.0313726, 0.305882, 0 )
-custom_fonts/font = SubResource( 2 )
-text = "MP"
-
 [node name="LowHealth" type="AnimationPlayer" parent="HUD"]
 anims/LowHealth = SubResource( 43 )
 anims/RESET = SubResource( 44 )
@@ -542,10 +476,6 @@ anims/RESET = SubResource( 44 )
 [node name="LowOxygen" type="AnimationPlayer" parent="HUD"]
 anims/LowOxygen = SubResource( 45 )
 anims/RESET = SubResource( 46 )
-
-[node name="ManaFade" type="AnimationPlayer" parent="HUD"]
-anims/ManaFade = SubResource( 47 )
-anims/RESET = SubResource( 48 )
 
 [node name="HealthIcon" type="TextureRect" parent="HUD"]
 modulate = Color( 1, 1, 1, 0.698039 )
@@ -562,15 +492,6 @@ margin_top = 8.0
 margin_right = 176.0
 margin_bottom = 56.0
 texture = ExtResource( 9 )
-
-[node name="ManaIcon" type="TextureRect" parent="HUD"]
-modulate = Color( 0.231373, 0.0313726, 0.305882, 0 )
-margin_left = 125.0
-margin_top = 64.0
-margin_right = 173.0
-margin_bottom = 112.0
-texture = ExtResource( 16 )
-flip_h = true
 
 [node name="HandLeft" type="ColorRect" parent="HUD"]
 anchor_top = 1.0
@@ -830,7 +751,7 @@ margin_bottom = 236.0
 
 [node name="Label" type="Label" parent="HUD/Sign/ScrollContainer"]
 margin_right = 240.0
-margin_bottom = 491.0
+margin_bottom = 396.0
 size_flags_horizontal = 3
 custom_fonts/font = SubResource( 55 )
 text = "SAMPLE TEXT SAMPLE TEXT SAMPLE TEXTSAMPLE TEXT SAMPLE TEXT SAMPLE TEXTSAMPLE TEXT SAMPLE TEXT SAMPLE TEXTSAMPLE TEXT SAMPLE TEXT SAMPLE TEXTSAMPLE TEXT SAMPLE TEXT SAMPLE TEXTSAMPLE TEXT SAMPLE TEXT SAMPLE TEXTSAMPLE TEXT SAMPLE TEXT SAMPLE TEXTSAMPLE TEXT SAMPLE TEXT SAMPLE TEXTSAMPLE TEXT SAMPLE TEXT SAMPLE TEXTSAMPLE TEXT SAMPLE TEXT SAMPLE TEXTSAMPLE TEXT SAMPLE TEXT SAMPLE TEXTSAMPLE TEXT SAMPLE TEXT SAMPLE TEXTSAMPLE TEXT SAMPLE TEXT SAMPLE TEXTSAMPLE TEXT SAMPLE TEXT SAMPLE TEXTSAMPLE TEXT SAMPLE TEXT SAMPLE TEXTSAMPLE TEXT SAMPLE TEXT SAMPLE TEXTSAMPLE TEXT SAMPLE TEXT SAMPLE TEXT"
@@ -854,6 +775,7 @@ margin_right = 40.0
 margin_bottom = 40.0
 
 [node name="Pause" type="Control" parent="."]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 
